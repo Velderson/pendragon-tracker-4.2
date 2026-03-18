@@ -275,21 +275,28 @@ const TREE_DATA = {
     "generations": [
       [
         {
-          "id": "great_unc_pat",
-          "label": "Maelgwn",
-          "role": "Great-Uncle · Knight",
-          "status": "alive",
-          "age": "55+",
-          "glory": "8420"
-        },
-        {
           "id": "gp_mat",
           "label": "Maternal\nGrandparents",
+          "status": "dead",
+          "ghost": true
+        },
+        {
+          "id": "gp_pat",
+          "label": "Paternal\nGrandparents",
           "status": "dead",
           "ghost": true
         }
       ],
       [
+        {
+          "id": "great_unc_pat",
+          "label": "Maelgwn",
+          "role": "Great-Uncle · Knight",
+          "status": "alive",
+          "age": "55+",
+          "glory": "8420",
+          "parentId": "gp_pat"
+        },
         {
           "id": "unc_a",
           "label": "Glewlwyd",
@@ -340,6 +347,7 @@ const TREE_DATA = {
           "role": "Father · Knight",
           "status": "alive",
           "age": "46",
+          "parentId": "gp_pat",
           "isfather": true
         },
         {
